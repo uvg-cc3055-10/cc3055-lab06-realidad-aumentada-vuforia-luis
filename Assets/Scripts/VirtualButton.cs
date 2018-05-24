@@ -7,9 +7,9 @@ public class VirtualButton : MonoBehaviour, IVirtualButtonEventHandler {
 
     public Animator birdAnim;
     private VirtualButtonBehaviour virtualBtn;
-
+    
     public void OnButtonPressed(VirtualButtonBehaviour vb)
-    {
+    {//Funcion para que el pajaro cante al precionar el boton
         birdAnim.SetTrigger("sing");
         Debug.Log("si funciona");
     }
@@ -21,7 +21,8 @@ public class VirtualButton : MonoBehaviour, IVirtualButtonEventHandler {
 
     // Use this for initialization
     void Start () {
-		virtualBtn = GetComponent<VirtualButtonBehaviour>();
+        //Codigo para iniciar el boton virtual
+        virtualBtn = GetComponent<VirtualButtonBehaviour>();
         virtualBtn.RegisterEventHandler(this);
 	}
 	

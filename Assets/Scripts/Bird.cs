@@ -14,12 +14,12 @@ public class Bird : MonoBehaviour {
         audios = GetComponent<AudioSource>();
 	}
 
-
+    //Funcion para resetear la animacion 
     void ResetHopInt()
     {
         anim.SetInteger("hop", 0);
     }
-
+    //Funcion para hacer que el pajaro cante
     void PlaySong()
     {
         audios.Play();
